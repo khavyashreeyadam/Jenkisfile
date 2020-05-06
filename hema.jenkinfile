@@ -1,4 +1,4 @@
-env.build_number = 1.0.0
+env.build_number = "1.0.0"
 timeout(time:10,units:'MINUTES'){
     node("master"){
     
