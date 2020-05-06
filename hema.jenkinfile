@@ -1,12 +1,16 @@
 env.build_number = "1.0.0"
 timeout(time:10,units:'MINUTES'){
     node("master"){
-    
-        paramaters {
-         string(name: "Branch", defaultValue: "master", description: "Branch top build")        
-         string(name: "version", defaultValue: "1.0.0", description: "version top build")
-        }
-        
+         properties(
+    [
+        parameters(
+            [string(name: "Branch", defaultValue: "master", description: "Branch top build"),
+             string(name: "version", defaultValue: "1.0.0", description: "version top build")]
+            )
+
+    ]
+    )  
+            
         stage("configure"){
             echo "hello $hema $chitti"
         }
